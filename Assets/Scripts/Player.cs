@@ -2,7 +2,6 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {
-    [SerializeField] private Camera _playerCamera;
     [SerializeField] private float _speed;
     [SerializeField] private float _strafeSpeed;
 
@@ -21,26 +20,4 @@ public class Player : MonoBehaviour
     public float VerticalMinAngle => _verticalMinAngle;
     public float VerticalMaxAngle => _verticalMaxAngle;
     public bool IsLookingBack => _isLookingBack;
-
-    private Transform _defaultCameraTransform;
-
-    private void Awake()
-    {
-        _defaultCameraTransform = _playerCamera.transform;
-    }
-
-    private void Update()
-    {
-        //if (Input.GetKeyDown(KeyCode.R))
-        //{
-        //    _playerCamera.transform.Rotate(new Vector3(0, 180, 0));
-        //    _isLookingBack = true;
-        //}
-
-        //if (Input.GetKeyUp(KeyCode.R))
-        //{
-        //    _playerCamera.transform.rotation = _defaultCameraTransform.rotation;
-        //    _isLookingBack = false;
-        //}
-    }
 }

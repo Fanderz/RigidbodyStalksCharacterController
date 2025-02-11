@@ -37,9 +37,6 @@ public class PlayerMover : MonoBehaviour
 
     private void Rotate()
     {
-        //if (_player.IsLookingBack)
-        //    return;
-
         transform.Rotate(Vector3.up * _player.HorizontalTurnSensitivity * Input.GetAxis("Mouse X"));
     }
 }
